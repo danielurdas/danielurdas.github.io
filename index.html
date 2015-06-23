@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Danielurdas.GitHub.io by danielurdas</title>
+    <title>Relación entre asignaturas y asignaturas outliers by Daniel Urdas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -11,16 +11,48 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Danielurdas.GitHub.io</h1>
-      <h2 class="project-tagline"></h2>
+      <h1 class="project-name">Relación entre asignaturas</h1>
+      <h1 class="project-name">y asignaturas outliers</h1>
+      <h2 class="project-tagline" align="right">TFG Daniel Gabriel Urdas</h2>
+
     </section>
 
     <section class="main-content">
 
 <h3>
+<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Descripción del problema</h3>
+
+<p align="justify"> Utilizando el grafico de esta página se pueden estudiar las relaciones que pueden haber entre las asignaturas del grado de Ingeniería Informática. El estudio se hará a partir de las notas obtenidas por los alumnos en las diferentes asignaturas. Observaremos si las notas de los alumnos tienen distribuciones parecidas para diferentes asignaturas, o si al contrario, existen asignaturas con notas distribuidas muy diferentemente a la resta de asignaras. También servirá para encontrar desproporcionalidades en las notas de una asignatura, es decir, si la gran mayoría de las notas se acumulan en la parte baja del rango de notas (notas muy bajas), o en la parte alta del rango de notas (notas muy altas).</p>
+
+<h3>
+<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implementación</h3>
+
+<p align="justify"> Para empezar con la descripción del proceso, indicaremos las asignaturas implicadas:</p>
+
+<ul>
+  <li align="justify"> <b>Asignaturas del primer curso</b>: Programación I , Diseño Digital Básico, Introducción a los Ordenadores , Álgebra , Cálculo , Matemática Discreta , Física, Algorítmica , Programación II, Estructura de Datos. </li>
+  <li align="justify"> <b>Asignaturas del segundo curso</b>: Probabilidades y Estadística , Empresa , Electrónica , Algorítmica avanzada, Introducción a la Computación Científica , Diseño de Software , Proyecto Integrado de Software, Estructura de Computadores , Programación de Arquitecturas Empotradas , Sistemas Operativos I.</li>
+  <li align="justify"> <b>Asignaturas del tercer curso</b>: Sistemas Operativos II, Redes , Lógica y Lenguajes , Base de datos, Software Distribuido , Inteligencia Artificial, Visión Artificial , Taller de Nuevos Usos de la Informática, Factores Humanos y Computación , Gráficos y Visualización de Datos.</li>
+  <li align="justify"> <b>Asignaturas del cuarto curso</b>: Ética y Legislación, Ingeniería del Software. </li>
+</ul>
+
+<p align="justify"> Como se puede observar, para el cuarto años tenemos solo dos asignaturas. Esto es debido a que sea han seleccionado solo las asignaturas obligatorias descartando las asignaturas optativas. Se ha tomado esta decisión ya que para obtener el coeficiente de la <i>correlación de Spearman</i> entre las notas de las asignaturas, hacen falta grupos de datos con el mismo número de elementos. Es decir, para cada asignatura, tienen que haber el mismo número de notas de los mismo sujetos.</p>
+<p align="justify"> Tal y como se ha indicado más arriba, se utilizará <b><i>la correlación de Spearman</i></b> por tal de medir las relaciones entre las notas de las asignaturas. Éste tipo de correlación nos indicará lo bien que se relacionan dos variables en función de sus valores. Es decir, si tenemos dos listas de notas en orden creciente de dos asignaturas, cuando un valor de una lista aumenta, y el valor de la otra lista también aumenta, se obtendrá un buen coeficiente de correlación.</p>
+
+<h3>
+<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Descripción y funcionamiento del grafico</h3>
+
+<p align="justify"> A continuación se detallarán los diferentes elementos del gráfico y su funcionamiento. Para seleccionar una asignatura se ha de llevar la flecha del curso sobre el nombre de la asignatura deseada. Una vez seleccionada, aparecerán los siguientes nuevos elementos: </p>
+<ul>
+  <li align="justify"> Las relaciones que tienen como color el rojo y que representan las asignaturas hacia las cuales existe una relación desde la asignatura seleccionada.</li>
+  <li align="justify"> Las relaciones que tienen como color el verde y que representan las asignaturas desde las cuales existe una relación hacia la asignatura seleccionada.</li>
+  <li align="justify"> Las asignaturas que no tienen ningún tipo de relación se consideran asignaturas outliners. Estas asignaturas tienen una baja correlación con la resta de asignaturas.</li>
+</ul>
+
+<h3>
 <a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Grafo de relaciones</h3>
 
-<p> Más abajo podemos ver la grafica interactiva.</p>
+<p> Más abajo podemos ver la gráfica interactiva.</p>
 
 
 <script language="JavaScript">
@@ -46,7 +78,7 @@ function autoResize(id){
 
       <footer class="site-footer">
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+        <span class="site-footer-credits">Trabajo final de Grado: Ciencia de los datos para el análisis de los resultados académicos de los estudios de la Facultad de Matemáticas: estudio estadístico de asignaturas. Autor Daniel Gabriel Urdas. &copy; Todos los derechos reservados</a>.</span>
       </footer>
 
     </section>
